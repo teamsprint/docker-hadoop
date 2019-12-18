@@ -59,7 +59,9 @@ RUN sed  -i "/^[^#]*UsePAM/ s/.*/#&/"  /etc/ssh/sshd_config
 RUN echo "UsePAM no" >> /etc/ssh/sshd_config
 RUN echo "Port 2122" >> /etc/ssh/sshd_config
 
-#CMD ["/etc/bootstrap.sh", "-bash"]
+ADD Dockerfile /
+ADD README.md /
+
 CMD ["/bin/bash"]
 
 # Hdfs ports
