@@ -40,6 +40,7 @@ ADD conf/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml
 ADD conf/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml
 ADD script/start-hadoop.sh /start-hadoop.sh
 ADD script/test-hadoop.sh /test-hadoop.sh
+ADD script/stop-hadoop.sh /stop-hadoop.sh
 
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
