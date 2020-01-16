@@ -2,9 +2,6 @@
 
 teamsprint/hadoop:2.7.3
 
-[![DockerPulls](https://img.shields.io/docker/pulls/teamsprint/docker-hadoop.svg)](https://registry.hub.docker.com/u/teamsprint/docker-hadoop/)
-[![DockerStars](https://img.shields.io/docker/stars/teamsprint/docker-hadoop.svg)](https://registry.hub.docker.com/u/teamsprint/docker-hadoop/)
-
 # Based on (in a row)
 
 teamsprint/centos:7<br/>

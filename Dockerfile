@@ -15,10 +15,10 @@ RUN ssh-keygen -q -N "" -t rsa -f /root/.ssh/id_rsa
 RUN cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 
 # hadoop
-RUN wget http://mirror.23media.de/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
-RUN tar -zxvf hadoop-2.7.3.tar.gz -C /opt
-RUN rm -f hadoop-2.7.3.tar.gz
-RUN ln -s /opt/hadoop-2.7.3 /opt/hadoop
+RUN wget http://archive.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz \
+        && tar -zxvf hadoop-2.7.3.tar.gz -C /opt \
+        && rm -f hadoop-2.7.3.tar.gz \
+        && ln -s /opt/hadoop-2.7.3 /opt/hadoop
 
 ENV HADOOP_PREFIX /opt/hadoop
 ENV HADOOP_COMMON_HOME $HADOOP_PREFIX
